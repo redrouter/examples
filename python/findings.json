@@ -1,0 +1,10 @@
+{
+  "findings": [
+    {"id": "F-01", "title": "Possible cross-account invoice read", "evidence_id": "E-01"},
+    {"id": "F-02", "title": "Session cookie missing Secure", "evidence_id": "E-02"}
+  ],
+  "evidence": {
+    "E-01": "Fictional local test: account A requested account B's /invoices/42 and received HTTP 200 with B's invoice total. No write was attempted. Authentication middleware verifies a session but the invoice query filters only by invoice ID.",
+    "E-02": "Fictional local test: Set-Cookie: session=REDACTED; HttpOnly; SameSite=Lax. The development server uses HTTP on localhost; production cookie configuration was not supplied."
+  }
+}
