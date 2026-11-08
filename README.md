@@ -42,3 +42,40 @@ npm ci && npm run check
 ```
 
 Checks make no paid requests. See the [API documentation](https://docs.redrouter.org) and [MIT license](LICENSE).
+
+
+## RedRouter agent skill
+
+Install one useful skill for configuring RedRouter, choosing an available model,
+making a first request, and troubleshooting API errors:
+
+```sh
+npx skills add redrouter/examples --skill redrouter
+```
+
+The current skills CLI requires Node.js 22.20+. Bundled skill examples require
+Python 3.10+ and no SDK. They default to labeled mocks and do not read a key or
+access the network:
+
+```sh
+python3 skills/redrouter/scripts/request.py --interface chat
+python3 skills/redrouter/scripts/request.py --interface messages
+python3 skills/redrouter/scripts/request.py --interface responses
+python3 skills/redrouter/scripts/request.py --interface chat --security
+```
+
+The skill covers both compatibility interfaces and a defensive review of a
+bundled synthetic local code sample. It does not execute tools, scan targets,
+host or modify models, or grant permission for security testing. Live examples
+require a privately configured `REDROUTER_API_KEY`, an available model and credit
+or eligible trial, plus explicit API-use approval. Installation does not authorize
+inference or spend credits. RedRouter routes inference through an upstream provider;
+account Zero Data Retention is opt-in. Review the
+[data-handling policy](https://docs.redrouter.org/data-handling) before sensitive input.
+
+See the [skill](skills/redrouter/SKILL.md) and
+[complete usage guide](docs/agent-skill.md) for approval guards, optional live smoke
+tests, prerequisites, documentation links and telemetry opt-out. The skill has no
+tracking code of its own; [skills.sh discovery](docs/skill-distribution.md) uses
+installation telemetry. For skill checks, install `requirements-skill-dev.txt`,
+then run `python -m unittest discover -s tests`.
