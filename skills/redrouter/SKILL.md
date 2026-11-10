@@ -50,8 +50,9 @@ do not describe RedRouter as hosting models or performing model abliteration its
 4. Before sensitive input, review [data handling](https://docs.redrouter.org/data-handling).
    New keys default to `store_content: false`; older keys may store content.
    Account Zero Data Retention is opt-in in Settings, covers subsequent API/Chat
-   requests, disables Save chat, and adds 20% to token prices outside paid monthly
-   plan periods. Billing metadata remains. These controls describe RedRouter's
+   requests, and disables Save chat. Check account eligibility in Settings and
+   the current plan requirements in the data-handling guide before relying on it.
+   Billing metadata remains. These controls describe RedRouter's
    retention; upstream retention is not independently verified. Minimize inputs.
 
 ## First request

@@ -64,10 +64,12 @@ say funded-only or describe older output limits; the specific trial guide and
 catalog are more precise. Do not copy those generic claims into client behavior.
 
 New API keys have request-content storage off; existing keys can retain it on.
-Account Zero Data Retention is separately opt-in, adds 20% outside paid monthly
-plan periods, disables Save chat, and retains billing metadata. It applies to
-subsequent requests. Where enabled, content storage is encrypted for up to 30 days;
-the data-handling guide permits backup copies for seven additional days.
+Account Zero Data Retention is separately opt-in, disables Save chat, and retains
+billing metadata. Eligibility and plan requirements are maintained in the
+[data-handling guide](https://docs.redrouter.org/data-handling); verify access in
+Settings before relying on it. It applies to subsequent requests. Where enabled,
+content storage is encrypted for up to 30 days; the data-handling guide permits
+backup copies for seven additional days.
 RedRouter forwards content to inference infrastructure and cannot independently
 verify its retention. Neither a Responses `store: false` field nor a new key
 establishes account-wide or upstream Zero Data Retention.
