@@ -30,10 +30,10 @@ The catalog reported 17 available exact IDs:
 
 ```text
 red-cyber-1
-glm-5.3-flash-rr
-glm-5.3-rr
-qwen3.8-27b-rr
-deepseek-v4.1-flash-rr
+glm-5.3-flash-red
+glm-5.3-red
+qwen3.8-27b-red
+deepseek-v4.1-flash-red
 deepseek-v4.1-flash-1017
 deepseek-v4.1-flash-0910
 glm-5.3-flash
@@ -50,10 +50,10 @@ minimax-m3.1-flash
 
 The example model `red-cyber-1` reported $0.25 input, $0.08 cached input and $1.00
 output per million tokens, 1,048,576 context and 8,192 max output tokens, with tools
-and response formats but no image input. `glm-5.3-flash-rr` reported $0.20 / $0.08 /
-$0.80 respectively, with the same context/output limits. GLM 5.3 RR reported a
+and response formats but no image input. `glm-5.3-flash-red` reported $0.20 / $0.08 /
+$0.80 respectively, with the same context/output limits. GLM 5.3 Red reported a
 32,768-token output limit and no response-format capability. Do not infer feature
-equivalence or a particular weight revision from a family name or RR suffix.
+equivalence or a particular weight revision from a family name or Red suffix.
 The catalog's explicit capability flags override generic examples.
 
 Eligible accounts receive ten upstream-dispatched trial generations shared by

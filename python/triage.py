@@ -50,7 +50,7 @@ def triage(client, report):
     for step in range(4):
         message = (
             client.chat.completions.create(
-                model="glm-5.3-flash-rr",
+                model="glm-5.3-flash-red",
                 max_tokens=768,
                 messages=messages,
                 tools=[TOOL],

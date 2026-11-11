@@ -11,7 +11,7 @@ def main():
         max_retries=0,
     )
     response = client.messages.create(
-        model="glm-5.3-flash-rr",
+        model="glm-5.3-flash-red",
         max_tokens=256,
         messages=[{"role": "user", "content": "Give three access-control checks for my own API."}],
     )

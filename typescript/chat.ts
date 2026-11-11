@@ -10,7 +10,7 @@ const client = new OpenAI({
   maxRetries: 0,
 });
 const response = await client.chat.completions.create({
-  model: "glm-5.3-flash-rr",
+  model: "glm-5.3-flash-red",
   max_tokens: 256,
   messages: [{ role: "user", content: "Give three access-control checks for my own API." }],
 });

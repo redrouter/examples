@@ -29,7 +29,7 @@ class SDKExamplesTests(unittest.TestCase):
                         or request.headers.get("x-api-key") == "fixture-key"
                     )
                     body = json.loads(request.content)
-                    self.assertEqual(body["model"], "glm-5.3-flash-rr")
+                    self.assertEqual(body["model"], "glm-5.3-flash-red")
                     self.assertEqual(body["max_tokens"], 256)
                     requests.append(body)
                     if module is chat:
@@ -37,7 +37,7 @@ class SDKExamplesTests(unittest.TestCase):
                             "id": "fixture",
                             "object": "chat.completion",
                             "created": 0,
-                            "model": "glm-5.3-flash-rr",
+                            "model": "glm-5.3-flash-red",
                             "choices": [
                                 {
                                     "index": 0,
@@ -54,7 +54,7 @@ class SDKExamplesTests(unittest.TestCase):
                             "id": "fixture",
                             "type": "message",
                             "role": "assistant",
-                            "model": "glm-5.3-flash-rr",
+                            "model": "glm-5.3-flash-red",
                             "stop_reason": "end_turn",
                             "content": [{"type": "text", "text": "Review account scope."}],
                             "usage": {"input_tokens": 10, "output_tokens": 4},

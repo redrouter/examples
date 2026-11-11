@@ -17,7 +17,7 @@ class TriageTests(unittest.TestCase):
         def respond(request):
             body = json.loads(request.content)
             self.assertEqual(str(request.url), "https://redrouter.org/v1/chat/completions")
-            self.assertEqual(body["model"], "glm-5.3-flash-rr")
+            self.assertEqual(body["model"], "glm-5.3-flash-red")
             self.assertLessEqual(body["max_tokens"], 2000)
             requests.append(body)
             if len(requests) == 1:
@@ -51,7 +51,7 @@ class TriageTests(unittest.TestCase):
                     "id": "fixture",
                     "object": "chat.completion",
                     "created": 0,
-                    "model": "glm-5.3-flash-rr",
+                    "model": "glm-5.3-flash-red",
                     "choices": [{"index": 0, "message": message, "finish_reason": "stop"}],
                 },
             )
@@ -87,7 +87,7 @@ class TriageTests(unittest.TestCase):
                     "id": "fixture",
                     "object": "chat.completion",
                     "created": 0,
-                    "model": "glm-5.3-flash-rr",
+                    "model": "glm-5.3-flash-red",
                     "choices": [
                         {
                             "index": 0,

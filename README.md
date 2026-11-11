@@ -2,7 +2,7 @@
 <h1 align="center">RedRouter examples</h1>
 <p align="center">Useful starting points.</p>
 
-[RedRouter](https://redrouter.org) is a low-refusal inference API for authorized security work. These examples use `glm-5.3-flash-rr` through OpenAI-compatible Chat Completions or Anthropic-compatible Messages. Copy a request, connect your SDK, or triage a fictional security report with a read-only tool.
+[RedRouter](https://redrouter.org) is a low-refusal inference API for authorized security work. These examples use `glm-5.3-flash-red` through OpenAI-compatible Chat Completions or Anthropic-compatible Messages. Copy a request, connect your SDK, or triage a fictional security report with a read-only tool.
 
 ## In 30 seconds
 
@@ -79,3 +79,5 @@ tests, prerequisites, documentation links and telemetry opt-out. The skill has n
 tracking code of its own; [skills.sh discovery](docs/skill-distribution.md) uses
 installation telemetry. For skill checks, install `requirements-skill-dev.txt`,
 then run `python -m unittest discover -s tests`.
+
+Model discovery is public: `curl https://redrouter.org/v1/models` requires no API key.
